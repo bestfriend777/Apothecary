@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
     {
         // This method is unreliable for physics because the update rate is variable based on our framerate
         // Time and physics based code should go in a FixedUpdate() method
-
-        //
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
