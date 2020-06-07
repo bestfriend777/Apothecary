@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dee997cf4a40fa4eb8461c50f8d6e1c, type: 3}
   m_Name: WornSlacks
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 1208182398139351782, guid: 1c5e7c76245d35243b80a004cd9fa151, type: 3}
   type: 0
   description: One might prefer to just be naked.
   equipmentType: 3

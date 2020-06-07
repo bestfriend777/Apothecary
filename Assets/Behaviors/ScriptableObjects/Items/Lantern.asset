@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6f3f6df38cff74099ad6b123c679b5, type: 3}
   m_Name: Lantern
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8234355763070203154, guid: 1ee6cca9f59bee44bbb0bbd3d7df9dc8, type: 3}
   type: 3
-  description: It glows with a color you haven't seen before today.
+  description: It glows with a color you didn't know about before.
