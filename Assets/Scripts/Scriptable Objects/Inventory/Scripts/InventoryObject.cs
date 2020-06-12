@@ -19,35 +19,19 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
     {
         if (_item.buffs.Length > 0)
         {
-            SetEmptySlot(_item, _amount);
+            inventoryContainer.Items.Add(new InventorySlot(_item.Id, _item, _amount));
             return;
         }
 
-        for (int i = 0; i < inventoryContainer.Items.Length; i++)
+        for (int i = 0; i < inventoryContainer.Items.Count; i++)
         {
-            if (inventoryContainer.Items[i].ID == _item.Id)
+            if (inventoryContainer.Items[i].item.Id == _item.Id)
             {
                 inventoryContainer.Items[i].AddAmount(_amount);
                 return;
             }
         }
-        SetEmptySlot(_item, _amount);
-
-    }
-
-    public InventorySlot SetEmptySlot(Item _item, int _amount)
-    {
-        for (int i = 0; i < inventoryContainer.Items.Length; i++)
-        {
-            if(inventoryContainer.Items[i].ID <= -1)
-            {
-                inventoryContainer.Items[i].UpdateSlot(_item.Id, _item, _amount);
-                return inventoryContainer.Items[i];
-            }    
-        }
-
-        // add behaviour full when inv is full 
-        return null;
+        inventoryContainer.Items.Add(new InventorySlot(_item.Id, _item, _amount));
     }
 
     [ContextMenu("Save")]
@@ -100,30 +84,17 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 [System.Serializable]
 public class Inventory
 {
-    public InventorySlot[] Items = new InventorySlot[20];
+    public List<InventorySlot> Items = new List<InventorySlot>();  
 }
 
 [System.Serializable]
 public class InventorySlot
 {
-    public int ID = -1;
+    public int ID;
     public Item item;
     public int amount;
-    public InventorySlot()
-    {
-        ID = -1;
-        item = null;
-        amount = 0;
-    }
 
     public InventorySlot(int _ID, Item _item, int _amount)
-    {
-        ID = _ID;
-        item = _item;
-        amount = _amount;
-    }
-    
-    public void UpdateSlot(int _ID, Item _item, int _amount)
     {
         ID = _ID;
         item = _item;
