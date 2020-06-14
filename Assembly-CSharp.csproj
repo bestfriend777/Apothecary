@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\Scriptable Objects\Items\Scripts\DefaultObject.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Items\Scripts\EquipmentObjects\EquipmentObject.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Items\Scripts\EquipmentObjects\FootwearObject.cs" />
+     <Compile Include="Assets\Scripts\Scriptable Objects\Items\Scripts\EquipmentObjects\GreavesObject.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Items\Scripts\EquipmentObjects\SlacksObject.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Items\Scripts\ItemObject.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Items\Scripts\RefillObjects\RefillHealthObject.cs" />
