@@ -9,7 +9,7 @@ public class FootwearObject : EquipmentObject
   
     public void Awake()
     {
-        equipmentType = EquipmentType.Slacks;
+        equipmentType = EquipmentType.Footwear;
     }
 }
 
