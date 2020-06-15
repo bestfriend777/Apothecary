@@ -9,8 +9,8 @@ public enum EquipmentType
     Shirt,
     Gloves,
     Slacks,
-    Footwear,
-    Swords
+    Swords, 
+    Greaves
 }
 
 public abstract class EquipmentObject : ItemObject
