@@ -9,6 +9,7 @@ public enum EquipmentType
     Shirt,
     Gloves,
     Slacks,
+    Footwear,
     Swords, 
     Greaves
 }
